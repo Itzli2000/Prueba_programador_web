@@ -17,7 +17,7 @@ $(document).ready(function() {
   var sday = document.getElementById("slide-grow-day");
   var btnday = document.getElementById("btnday");
   var loan = parseFloat(rangepres.value);
-  var mytax = parseFloat(rangepres.value * .2625).toFixed(2) ;
+  var mytax = parseFloat(rangepres.value * .16).toFixed(2) ;
   var totalpay = parseFloat(+loan + +mytax).toFixed(2);
   today.setDate(today.getDate() + parseInt(rangeday.value));
   // Convert date info
@@ -76,7 +76,7 @@ $(document).ready(function() {
       var pres = parseInt($('#prestamo').val() - 10);
       console.log(btnpos);
       smoney.style.width = pwid - 0.5 + "px";
-      btnmn.style.left = btnpos - 0.3 + "px";
+      btnmn.style.left = btnpos - 0.5 + "px";
       $('#prestamo').val(pres);
       $('#prestamo').trigger('change');
       var loanchange = $('#prestamo').val();
@@ -96,7 +96,7 @@ $(document).ready(function() {
       var pres = parseInt($('#prestamo').val())+ 10;
       console.log(btnpos);
       smoney.style.width = pwid + 0.5 + "px";
-      btnmn.style.left = btnpos + 0.3 + "px";
+      btnmn.style.left = btnpos + 0.5 + "px";
       $('#prestamo').val(pres);
       $('#prestamo').trigger('change');
       var loanchange = $('#prestamo').val();
@@ -168,7 +168,7 @@ $(document).ready(function() {
     var tot = document.getElementById("total");
     var datepay = document.getElementById("date");
     var loan = parseFloat(rangepres.value);
-    var mytax = parseFloat(rangepres.value * .2625).toFixed(2) ;
+    var mytax = parseFloat(rangepres.value * .16).toFixed(2) ;
     var totalpay = parseFloat(+loan + +mytax).toFixed(2);
     today.setDate(today.getDate() + parseInt(rangeday.value));
     var dd = today.getDate();
