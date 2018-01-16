@@ -204,7 +204,12 @@ span.bold {
   background-color: #d50b3a;
   color: #FFF;
   min-height: 100px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; }
+
+.btnRed:hover {
+  background-color: #005F88 !important;
+  box-shadow: inset -5px -5px 3px #003B55; }
 
 .btnRed p {
   font-size: 25px;
