@@ -48,7 +48,8 @@ span.bold {
   background-color: #5fa2a4;
   content: ""; }
 
-.slide-grow {
+#slide-grow-money,
+#slide-grow-day {
   position: absolute;
   width: 50px;
   height: 35px;
@@ -62,7 +63,7 @@ span.bold {
   height: 55px;
   border-radius: 20px;
   content: "$1500.00";
-  left: 55px;
+  left: 70px;
   top: 5px;
   text-align: center;
   background-color: #c50927;

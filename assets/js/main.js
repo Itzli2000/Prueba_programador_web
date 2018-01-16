@@ -12,6 +12,10 @@ $(document).ready(function() {
   var yours = document.getElementById("yourmoney");
   var tot = document.getElementById("total");
   var datepay = document.getElementById("date");
+  var smoney = document.getElementById("slide-grow-money");
+  var btnmn = document.getElementById("btnmoney");
+  var sday = document.getElementById("slide-grow-day");
+  var btnday = document.getElementById("btnday");
   var loan = parseFloat(rangepres.value);
   var mytax = parseFloat(rangepres.value * .2625).toFixed(2) ;
   var totalpay = parseFloat(+loan + +mytax).toFixed(2);
@@ -62,9 +66,17 @@ $(document).ready(function() {
   // Function to detect clicks on more and less buttons for money
   $('#prestamoless').on("click", function() {
     console.log("less clicked");
+    var pwid = document.getElementById("slide-grow-money").offsetWidth;
+    var btnpos = parseFloat($("#btnmoney").css("left"));
+    var smoney = document.getElementById("slide-grow-money");
+    var btnmn = document.getElementById("btnmoney");
+    var sday = document.getElementById("slide-grow-day");
+    var btnday = document.getElementById("btnday");
     if($('#prestamo').val() > 1000){
       var pres = parseInt($('#prestamo').val() - 10);
-      console.log(pres);
+      console.log(btnpos);
+      smoney.style.width = pwid - 0.5 + "px";
+      btnmn.style.left = btnpos - 0.3 + "px";
       $('#prestamo').val(pres);
       $('#prestamo').trigger('change');
       var loanchange = $('#prestamo').val();
@@ -76,9 +88,15 @@ $(document).ready(function() {
   });
   $('#prestamomore').on("click", function() {
     console.log("more clicked");
+    var pwid = document.getElementById("slide-grow-money").offsetWidth;
+    var btnpos = parseFloat($("#btnmoney").css("left"));
+    var smoney = document.getElementById("slide-grow-money");
+    var btnmn = document.getElementById("btnmoney");
     if($('#prestamo').val() < 5000){
       var pres = parseInt($('#prestamo').val())+ 10;
-      console.log(pres);
+      console.log(btnpos);
+      smoney.style.width = pwid + 0.5 + "px";
+      btnmn.style.left = btnpos + 0.3 + "px";
       $('#prestamo').val(pres);
       $('#prestamo').trigger('change');
       var loanchange = $('#prestamo').val();
@@ -91,9 +109,15 @@ $(document).ready(function() {
   // Function to detect clicks on more and less buttons for days
   $('#dayless').on("click", function() {
     console.log("less clicked");
+    var pwid = document.getElementById("slide-grow-day").offsetWidth;
+    var btnpos = parseInt($("#btnday").css("left"));
+    var sday = document.getElementById("slide-grow-day");
+    var btnday = document.getElementById("btnday");
     if($('#dayrate').val() > 1){
       var pres = parseInt($('#dayrate').val() - 1);
       console.log(pres);
+      sday.style.width = pwid - 4 + "px";
+      btnday.style.left = parseInt(btnpos - 3) + "px";
       $('#dayrate').val(pres);
       $('#dayrate').trigger('change');
       var loanchange = $('#dayrate').val();
@@ -105,9 +129,15 @@ $(document).ready(function() {
   });
   $('#daymore').on("click", function() {
     console.log("more clicked");
+    var pwid = document.getElementById("slide-grow-day").offsetWidth;
+    var btnpos = parseInt($("#btnday").css("left"));
+    var sday = document.getElementById("slide-grow-day");
+    var btnday = document.getElementById("btnday");
     if($('#dayrate').val() < 30){
       var pres = parseInt($('#dayrate').val())+ 1;
       console.log(pres);
+      sday.style.width = pwid + 5 + "px";
+      btnday.style.left = parseInt(btnpos + 4) + "px";
       $('#dayrate').val(pres);
       $('#dayrate').trigger('change');
       var loanchange = $('#dayrate').val();
