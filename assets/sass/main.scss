@@ -4,7 +4,7 @@ body {
 }
 main.grad {
   max-width: 1200px;
-  margin: auto!important;
+  margin: auto;
 }
 h2 {
   font-size: 1.5rem;
@@ -105,11 +105,14 @@ span.bold {
   color: #FFF;
 }
 #lanaContainer {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .lana {
   padding: 0;
   margin: 0;
+}
+.color {
+  margin-bottom: 0;
 }
 .lanainfo .color {
   background-color: #d50b3a;
@@ -126,7 +129,7 @@ span.bold {
 .lanainfo:first-of-type:after {
   content: "+";
   float: right;
-  top: -56px;
+  top: -39px;
   position: relative;
   right: -2px;
   font-size: 20px;
@@ -227,30 +230,32 @@ span.bold {
 }
 
 
-// Tablet screen styles
-@media screen and (min-width: 768px) {
+
+
+@media only screen and (min-width: 768px) {
   .sliders {
     height: 400px;
     max-width: 500px;
-    margin: auto!important;
+    margin: auto;
   }
   .slider-container{
     margin-top: 50px;
   }
   #lanaContainer {
     max-width: 650px;
-    margin: auto!important;
+    margin: 0 auto;
   }
   #CATinfo {
     max-width: 350px;
   }
 }
 
-// Screens over 1024px
-@media screen and (min-width: 1024px) {
+
+
+@media only screen and (min-width: 1024px) {
   main.grad {
     max-width: 1200px;
-    margin: auto!important;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -260,15 +265,30 @@ span.bold {
 
 
 
-// Screens over 1200px
-@media screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
   main.grad {
     max-width: 1200px;
-    height: 1000px;
-    margin: auto!important;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
 
+}
+
+
+
+@media only screen and (min-width: 1300px) {
+  main.grad {
+    height: 100vh;
+  }
+  .sliders {
+    height: 300px;
+  }
+  #lanaContainer {
+    margin-top: 20px !important;
+  }
+  #btnCalc {
+    margin-top: 100px;
+  }
 }
