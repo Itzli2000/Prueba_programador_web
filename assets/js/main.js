@@ -59,11 +59,11 @@ $(document).ready(function() {
   datepay.innerHTML = day + "<br>" + finaledate;
 
 
-  // Function to detect clicks on more and less buttons
+  // Function to detect clicks on more and less buttons for money
   $('#prestamoless').on("click", function() {
     console.log("less clicked");
     if($('#prestamo').val() > 1000){
-      var pres = parseInt($('#prestamo').val() - 1);
+      var pres = parseInt($('#prestamo').val() - 10);
       console.log(pres);
       $('#prestamo').val(pres);
       $('#prestamo').trigger('change');
@@ -77,11 +77,40 @@ $(document).ready(function() {
   $('#prestamomore').on("click", function() {
     console.log("more clicked");
     if($('#prestamo').val() < 5000){
-      var pres = parseInt($('#prestamo').val())+ 1;
+      var pres = parseInt($('#prestamo').val())+ 10;
       console.log(pres);
       $('#prestamo').val(pres);
       $('#prestamo').trigger('change');
       var loanchange = $('#prestamo').val();
+      console.log(loanchange)
+      yours.innerHTML = "$ "+ pres;
+      qut.innerHTML = "$ "+ pres;
+      changeLoan(pres);
+    }
+  });
+  // Function to detect clicks on more and less buttons for days
+  $('#dayless').on("click", function() {
+    console.log("less clicked");
+    if($('#dayrate').val() > 1){
+      var pres = parseInt($('#dayrate').val() - 1);
+      console.log(pres);
+      $('#dayrate').val(pres);
+      $('#dayrate').trigger('change');
+      var loanchange = $('#dayrate').val();
+      console.log(loanchange)
+      yours.innerHTML = "$ "+ pres;
+      qut.innerHTML = "$ "+ pres;
+      changeLoan(pres);
+    }
+  });
+  $('#daymore').on("click", function() {
+    console.log("more clicked");
+    if($('#dayrate').val() < 30){
+      var pres = parseInt($('#dayrate').val())+ 1;
+      console.log(pres);
+      $('#dayrate').val(pres);
+      $('#dayrate').trigger('change');
+      var loanchange = $('#dayrate').val();
       console.log(loanchange)
       yours.innerHTML = "$ "+ pres;
       qut.innerHTML = "$ "+ pres;
