@@ -35,14 +35,15 @@
 				<div class="sliders col-sm-12 col-md-6 d-inline-flex flex-column justify-content-center text-center">
 					<h2>¿<span>Cuanta</span> <span class="bold">lana</span> quieres?</h2>
 					<div class="slider-container pt-3 d-flex w-100">
-						<input id="prestamo" class="d-none" value="1500" max="5000" min="1000" step="10" type="range">
+						<input id="prestamo" class="d-none" value="1010" type="number">
+						<p id="loan" class="d-none">1500</p>
 						<div id="prestamoless" class="btn-less d-inline-block">
 							<p class="btn-text m-0 p-0 text-white align-self-center">-</p>
 						</div>
 						<div class="slide d-inline-block"></div>
 						<div class="slide-grow d-inline-block"></div>
 						<div class="btninfo">
-							<p>$1500</p>
+							<p id="quant">$1500</p>
 						</div>
 						<div id="prestamomore" class="btn-more d-inline-block">
 							<p class="btn-text m-0 p-0 text-white align-self-center">+</p>
@@ -52,14 +53,14 @@
 				<div class="sliders col-sm-12 col-md-6 d-inline-flex flex-column justify-content-center text-center">
 					<h2>¿<span>Cuándo</span> la puedes pagar?</h2>
 					<div class="slider-container pt-3 d-flex w-100">
-						<input id="prestamo" class="d-none" value="8" max="30" min="3" step="1" type="range">
+						<input id="dayrate" class="d-none" value="8" type="number">
 						<div id="dayless" class="btn-less d-inline-block">
 							<p class="btn-text m-0 p-0 text-white align-self-center">-</p>
 						</div>
 						<div class="slide d-inline-block"></div>
 						<div class="slide-grow d-inline-block"></div>
 						<div class="btninfo">
-							<p>5 días</p>
+							<p id="totdays">5 días</p>
 						</div>
 						<div id="daymore" class="btn-more d-inline-block">
 							<p class="btn-text m-0 p-0 text-white align-self-center">+</p>
@@ -71,27 +72,27 @@
 		<div id="lanaContainer" class="row">
 			<div class="lana lanainfo col-6 col-md-3">
 				<p class="text-center bold">Tu lana</p>
-				<p class="color">$1500</p>
+				<p id="yourmoney" class="color">$1500</p>
 			</div>
 			<div class="lana lanainfo col-6 col-md-3">
 				<p class="text-center bold">Interés</p>
-				<p class="color">$algo</p>
+				<p id="tax" class="color">$algo</p>
 			</div>
 			<div class="lana lanablue col-6 col-md-3">
 				<div class="red-arrow"></div>
 				<p class="text-center bold">Total a pagar</p>
-				<p class="color">Mucho</p>
+				<p id="total" class="color">Mucho</p>
 			</div>
 			<div class="lana lanawhite col-6 col-md-3">
 				<div class="blue-arrow"></div>
 				<p class="text-center bold">Día de pago</p>
-				<p class="color">lunes <br>15 de enero</p>
+				<p id="date" class="color">lunes <br>15 de enero</p>
 			</div>
 			<div id="CATinfo" class="col m-auto">
 				<p class="text-center text-bold d-flex justify-content-around">Costo Anual Total (C.A.T.): 387.94%      <span><i class="quest fa fa-question-circle" aria-hidden="true"></i></span></p>
 			</div>
-			<div id="btnCalc" class="row w-100">
-				<div class="btnRed d-flex flex-row align-items-center justify-content-center m-auto">
+			<div id="btnCalc" class="row w-100 m-0 justify-content-center">
+				<div class="btnRed d-flex flex-row align-items-center justify-content-center">
 					<p>Da clic aquí <br>para obtener tu lana</p>
 					<span><i class="fa fa-usd" aria-hidden="true"></i></span>
 				</div>
